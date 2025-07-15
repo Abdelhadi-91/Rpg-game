@@ -352,7 +352,7 @@ function pick(guess) {
     }
     else {
         text.innerText += "Wrong! You lost 10 health.\n"
-        flashStatChange(health, false);
+        flashStatChange(healthText, false);
         if (health<= 0) {
             loose();
         } 
