@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="You want to slay the dragon and become a hero? You are in the right place.">
+    <title>RPG - Dragon Slayer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./pics/sword.png">
+  </head>
+  <body>
+    <h1>RPG - DRAGON SLAYER</h1>
+    <div id="game">
+      <div id="stats">
+        <!--<span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
+        <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
+        <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
+      -->
+        <ul id="items">
+            <li>
+                <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
+            </li>
+            <li>
+                <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
+            </li>
+            <li>
+                <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
+            </li>
+        </ul>
+      </div>
+      <div id="monsterStats">
+        <ul id="ms">
+            <li><span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span></li>
+            <li><span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span></li>
+        </ul>
+        <!--
+        <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
+        <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+    -->
+      </div>
+      <div id="text">
+        Welcome to Dragon Repeller. You must defeat the dragon that is
+        preventing people from leaving the town. You are in the town square.
+        Where do you want to go? Use the buttons above.
+      </div>
+      <div id="controls">
+        <button id="button1">Go to store</button>
+        <button id="button2">Go to cave</button>
+        <button id="button3" class="special">Fight dragon</button>
+      </div>
+      
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
