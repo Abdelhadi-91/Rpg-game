@@ -1,7 +1,7 @@
 body {
   background-image: url(./pics/back.png);
   background-size: cover;
-  font-family: 'Product Sans';
+  font-family: Verdana, sans-serif;
 }
 
 h1 {
@@ -48,7 +48,7 @@ h1 {
 }
 
 button {
-  width: 200px;
+  width: 270px;
   margin: 10px auto 10px auto;
   padding: 5px;
   font-size: 18px;
