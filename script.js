@@ -1,3 +1,4 @@
+// def vars
 let xp = 0;
 let health = 100;
 let gold = 50;
@@ -16,6 +17,7 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterNameText = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 
+// game locations
 const locations = [
   {
     name: "town square",
@@ -142,13 +144,9 @@ function update(location) {
 }
 
 
-
+// town part
 function goTown() {
   update(locations[0]);
-}
-
-function goCave() {
-    update(locations[2]);
 }
 
 // store part
@@ -193,6 +191,7 @@ function buyWeapon() {
     }
 }
 
+//sell the weakest weapon for 15 gold if you have more then one and you reached the powerful one
 function sellWeapon() {
     if (inventory.length>1) {
         gold += 15;
@@ -209,6 +208,10 @@ function sellWeapon() {
 }
 
 
+//cave part
+function goCave() {
+    update(locations[2]);
+}
 
 
 function fightSlime() {
@@ -226,19 +229,17 @@ function fightDragon() {
     goFight();
 }
 
+// main function of fighting
 function goFight() {
     update(locations[3]);
-    monsterHealth = monsters[fighting].health;
-    monsterStats.style.display = "block" ;
+    monsterHealth = monsters[fighting].health; //fighting is the index of the monster
+    monsterStats.style.display = "block" ; // display the bar of monster state
     monsterNameText.innerText = monsters[fighting].name ;
     monsterHealthText.innerText = monsterHealth ;
 
 }
 
-
-
-
-
+// attack function
 function attack() {
     text.innerText = "The " + monsters[fighting].name + " attacks.\n";
     text.innerText += "You atatck it with your " + weapons[currentWeapon].name + ".\n";
@@ -251,12 +252,6 @@ function attack() {
     }
     health -= getMonsterAttackValue(monsters[fighting].level);
     flashStatChange(healthText, false);
-    
-    function isMonsterHit() {
-        return Math.random() > .2 || health < 20 ;
-    }
-
-    
     healthText.innerText = health ;
     monsterHealthText.innerText = monsterHealth ;
     if (health<= 0) {
@@ -272,17 +267,26 @@ function attack() {
     }
 }
 
+//boolean function : 80% hit 20% miss
+function isMonsterHit() {
+        return Math.random() > .2 || health < 20 ;
+    }
+
+// the formula of damage    
 function getMonsterAttackValue(level) {
      let hit = (level * 5) - (Math.floor(Math.random() * xp)) ;
      return hit;
 }
 
+// dodge function : anything happened for the moment
 function dodge() {
     text.innerText = "You dodge the attack from the "+ monsters[fighting].name +".\n"
 
 }
 
+//function of when you defeat the monster
 function defeatMonster() {
+    // that two const for the gold and xp earned
     const goldEarned = Math.floor(monsters[fighting].level * 6.7);
     const xpEarned = monsters[fighting].level;
 
@@ -296,10 +300,12 @@ function defeatMonster() {
     text.innerText += "You gained "+ xpEarned+ " XP and "+ goldEarned +" gold.\n";
 }
 
+// lose function 
 function loose() {
     update(locations[5]);
 }
 
+//restart the game
 function restart() {
     xp = 0;
     health = 100;
@@ -313,6 +319,7 @@ function restart() {
 
 }
 
+//win the game
 function winGame() {
     update(locations[6]);
 }
@@ -331,7 +338,7 @@ function pickEight() {
 }
  
 function pick(guess) {
-    let numbers = [];
+    let numbers = []; //array for 10 numbers
     while (numbers.length < 10) {
         numbers.push(Math.floor(Math.random() * 11));
     }
@@ -352,6 +359,8 @@ function pick(guess) {
     }
     else {
         text.innerText += "Wrong! You lost 10 health.\n"
+        health -= 10;
+        healthText = health;
         flashStatChange(healthText, false);
         if (health<= 0) {
             loose();
@@ -359,7 +368,7 @@ function pick(guess) {
     }
 }
 
-// add
+// change the color of text
 
 function flashStatChange(element, isIncrease) {
   const className = isIncrease ? "flash-green" : "flash-red";
