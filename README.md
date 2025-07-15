@@ -2,8 +2,6 @@
 
 A simple, browser-based RPG game where you explore locations, fight monsters, earn gold, and level up by defeating enemies — all built with HTML, CSS, and JavaScript.
 
-![screenshot](./pics/share.jpg)
-
 ## 🎮 Features
 
 - 👣 Navigate through the town, store, and cave  
@@ -52,14 +50,6 @@ A simple, browser-based RPG game where you explore locations, fight monsters, ea
 - **HTML5**
 - **CSS3** (Flexbox, animations, responsive design)
 - **Vanilla JavaScript**
-
----
-
-## 📸 Screenshots
-
-| Desktop View | Mobile View |
-|--------------|-------------|
-| ![Desktop](./pics/share.jpg) |
 
 ---
 
