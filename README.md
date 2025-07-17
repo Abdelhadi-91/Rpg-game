@@ -15,21 +15,6 @@ A simple, browser-based RPG game where you explore locations, fight monsters, ea
 
 ---
 
-## 📂 Project Structure
-
-```
-📁 rpg-dragon-slayer/
-├── index.html           # Main HTML file
-├── styles.css           # CSS styles
-├── script.js            # JavaScript game logic
-└── pics/                # All images (backgrounds, icons, etc.)
-    ├── back.png
-    ├── background.png
-    ├── sword.png
-    └── share.jpg
-```
-
----
 
 ## 💡 Gameplay Instructions
 
@@ -60,11 +45,5 @@ A simple, browser-based RPG game where you explore locations, fight monsters, ea
 - Sound effects & music.
 - More levels or a map.
 - Character selection.
-
----
-
-## ⚖️ License
-
-This project is open-source and free to use. You can modify and build on it however you like.
 
 ---
