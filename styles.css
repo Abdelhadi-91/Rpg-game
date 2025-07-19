@@ -132,3 +132,22 @@ p {
 }
 
 
+@media (max-width:750px) {
+  #game {
+    width: 95%;
+    height: 60%;
+  }
+
+  #items {
+    display: block;
+    text-align: center;
+  }
+
+  #items li {
+    margin-bottom: 5px;
+  }
+
+  #text {
+    margin-top: 0;
+  }
+}
