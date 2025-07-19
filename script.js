@@ -242,7 +242,7 @@ function goFight() {
 // attack function
 function attack() {
     text.innerText = "The " + monsters[fighting].name + " attacks.\n";
-    text.innerText += "You atatck it with your " + weapons[currentWeapon].name + ".\n";
+    text.innerText += "You attack it with your " + weapons[currentWeapon].name + ".\n";
     if (isMonsterHit()) {
         monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) +1 ;
         flashStatChange(monsterHealthText, false);
@@ -251,11 +251,14 @@ function attack() {
         text.innerText += "You miss.\n"
     }
     health -= getMonsterAttackValue(monsters[fighting].level);
+    if (health<=0) {
+        health = 0;
+    }
     flashStatChange(healthText, false);
     healthText.innerText = health ;
     monsterHealthText.innerText = monsterHealth ;
     if (health<= 0) {
-        loose()
+        loose();
     }
     else if (monsterHealth<=0 ) {
         fighting === 2 ? winGame() : defeatMonster() ;
