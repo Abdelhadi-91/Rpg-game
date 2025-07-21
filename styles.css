@@ -26,7 +26,7 @@ h1 {
   position: relative;
   /*max-width: 500px;
   max-height: 400px;*/
-  width: 45%;
+  width: 60%;
   height: 450px;
   background-color: lightgray;
   color: white;
@@ -132,15 +132,14 @@ p {
 }
 
 
-@media (max-width:750px) {
+@media (max-width:900px) {
   #game {
     width: 95%;
     height: 60%;
   }
 
   #items {
-    display: block;
-    text-align: center;
+    
   }
 
   #items li {
@@ -149,5 +148,23 @@ p {
 
   #text {
     margin-top: 0;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width:570px) {
+  #game {
+    width: 90%;
+    height: 70%;
+  }
+
+  #items {
+    font-size: 22px;
+  }
+  h1 {
+    font-size: 27px;
   }
 }
