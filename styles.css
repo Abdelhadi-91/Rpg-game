@@ -138,12 +138,12 @@ p {
     height: 60%;
   }
 
-  #items {
-    
-  }
-
   #items li {
     margin-bottom: 5px;
+  }
+
+  #monsterStats {
+    margin-bottom: 20px;
   }
 
   #text {
@@ -159,6 +159,10 @@ p {
   #game {
     width: 90%;
     height: 70%;
+  }
+
+  #monsterStats {
+    margin-bottom: 20px;
   }
 
   #items {
